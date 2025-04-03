@@ -1,0 +1,110 @@
+<div class="page-header">
+    <h1>Users Management</h1>
+</div>
+
+<div class="alert alert-danger" ng-if="error">
+    <strong>Error!</strong> {{error}}
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Add New User</h3>
+            </div>
+            <div class="panel-body">
+                <form ng-submit="addUser()">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" class="form-control" id="username" ng-model="newUser.username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" ng-model="newUser.email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role:</label>
+                        <input type="text" class="form-control" id="role" ng-model="newUser.role">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add User</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                <h3 class="panel-title pull-left">User List</h3>
+            </div>
+            <div class="panel-body">
+                <div ng-show="loading" class="text-center">
+                    <p>Loading users...</p>
+                </div>
+                
+                <div ng-show="!loading && users.length === 0" class="alert alert-info">
+                    No users found.
+                </div>
+                
+                <table class="table table-striped" ng-show="users.length > 0">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="user in users">
+                            <td>{{user.id}}</td>
+                            <td>{{user.username}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.role}}</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary" ng-click="editUser(user)">Edit</button>
+                                <button class="btn btn-sm btn-danger" ng-click="deleteUser(user.id)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit User Modal -->
+<div class="modal" tabindex="-1" role="dialog" ng-show="editingUser">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" ng-click="cancelEdit()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Edit User</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="edit-username">Username:</label>
+                        <input type="text" class="form-control" id="edit-username" ng-model="editingUser.username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-email">Email:</label>
+                        <input type="email" class="form-control" id="edit-email" ng-model="editingUser.email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-role">Role:</label>
+                        <input type="text" class="form-control" id="edit-role" ng-model="editingUser.role">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" ng-click="cancelEdit()">Cancel</button>
+                <button type="button" class="btn btn-primary" ng-click="saveUser()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade in"></div>
+</div>

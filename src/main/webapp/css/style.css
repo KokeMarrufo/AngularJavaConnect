@@ -1,0 +1,93 @@
+/* Main styles for the legacy application */
+
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #f5f5f5;
+}
+
+/* Header styling */
+.navbar {
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Main content area */
+.main-content {
+    min-height: 500px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Jumbotron custom styling */
+.jumbotron {
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 30px;
+    padding: 15px 0;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Panel customization */
+.panel {
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.panel-heading {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+/* Form styling */
+.form-control {
+    border-radius: 3px;
+}
+
+/* Table customization */
+.table > thead > tr > th {
+    border-bottom: 2px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+/* Modal customization */
+.modal {
+    display: block;
+}
+
+.modal-content {
+    border-radius: 3px;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+}
+
+/* Custom buttons */
+.btn {
+    border-radius: 3px;
+}
+
+/* Utility classes */
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+/* Loading indicator */
+.loading-indicator {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
