@@ -15,8 +15,8 @@ import java.util.List;
 
 /**
  * Servlet handling REST operations for User entities
+ * Mapping for this servlet is defined in web.xml
  */
-@WebServlet("/api/users/*")
 public class UserServlet extends HttpServlet {
     
     private static final long serialVersionUID = 1L;

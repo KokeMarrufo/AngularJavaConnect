@@ -1,5 +1,6 @@
 /home/runner/workspace/src/main/java/com/legacy/app/service/ProductService.java
 /home/runner/workspace/src/main/java/com/legacy/app/servlet/ProductServlet.java
+/home/runner/workspace/src/main/java/com/legacy/app/servlet/WelcomeServlet.java
 /home/runner/workspace/src/main/java/com/legacy/app/model/User.java
 /home/runner/workspace/src/main/java/com/legacy/app/service/UserService.java
 /home/runner/workspace/src/main/java/com/legacy/app/servlet/UserServlet.java

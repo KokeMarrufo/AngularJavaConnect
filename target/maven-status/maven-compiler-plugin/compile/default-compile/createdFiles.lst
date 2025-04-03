@@ -1,6 +1,7 @@
-com/legacy/app/servlet/ProductServlet.class
 com/legacy/app/servlet/UserServlet.class
-com/legacy/app/service/UserService.class
-com/legacy/app/model/User.class
 com/legacy/app/model/Product.class
+com/legacy/app/servlet/ProductServlet.class
+com/legacy/app/service/UserService.class
+com/legacy/app/servlet/WelcomeServlet.class
+com/legacy/app/model/User.class
 com/legacy/app/service/ProductService.class

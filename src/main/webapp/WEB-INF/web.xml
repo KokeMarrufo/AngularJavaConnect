@@ -7,6 +7,53 @@
     
     <display-name>Legacy AngularJS Servlet Application</display-name>
     
+    <!-- Servlet Definitions -->
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>com.legacy.app.servlet.UserServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ProductServlet</servlet-name>
+        <servlet-class>com.legacy.app.servlet.ProductServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <servlet-class>com.legacy.app.servlet.WelcomeServlet</servlet-class>
+    </servlet>
+    
+    <!-- Servlet Mappings -->
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/api/users/*</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>ProductServlet</servlet-name>
+        <url-pattern>/api/products/*</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <url-pattern>/welcome</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Default Servlet for static content -->
+    <servlet>
+        <servlet-name>default</servlet-name>
+        <servlet-class>org.eclipse.jetty.servlet.DefaultServlet</servlet-class>
+        <init-param>
+            <param-name>dirAllowed</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    
     <!-- Welcome files -->
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
